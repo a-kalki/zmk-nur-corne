@@ -44,10 +44,17 @@
         };
     };
 
+    macros {
+        m_up5: m_up5 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp UP &kp UP &kp UP &kp UP &kp UP>; };
+        m_dn5: m_dn5 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN>; };
+        m_lt5: m_lt5 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>; };
+        m_rt5: m_rt5 { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT>; };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        // LAYER 0: Основной (QWERTY)
+        // LAYER 0: QWERTY
         default_layer {
             display-name = "QWERTY";
             bindings = <
@@ -59,7 +66,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        // LAYER 1: NUM (Числа справа / Скобки слева)
+        // LAYER 1: NUM (Числа и Математика)
         num_layer {
             display-name = "NUM";
             bindings = <
@@ -70,31 +77,30 @@
             >;
         };
 
-        // LAYER 2: SYM (Символы справа / Скобки слева)
+        // LAYER 2: SYM (Все спецсимволы + кавычки)
         sym_layer {
             display-name = "SYM";
             bindings = <
-&trans  &kp LBRC   &kp RBRC   &kp LPAR   &kp RPAR   &kp GRAVE                                 &mmv MOVE_UP                     &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR   &kp RPAR   &kp DEL
-&trans  &kp LBKT   &kp RBKT   &kp LT     &kp GT     &kp BSLH                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp DLLR   &kp HASH  &kp AT     &kp EXCL   &kp PRCNT  &kp SEMI
-&trans  &kp TILDE  &kp AMPS   &kp PIPE   &none      &none        &trans                       &mmv MOVE_DOWN                   &none      &none     &none      &none      &none      &none
+&trans  &kp LBRC   &kp RBRC   &kp LPAR   &kp RPAR   &kp GRAVE                                 &mmv MOVE_UP                     &kp PLUS   &kp N7    &kp N8    &kp N9     &kp ASTRK  &kp DEL
+&trans  &kp LBKT   &kp RBKT   &kp LT     &kp GT     &kp BSLH                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp DLLR  &kp HASH  &kp AT     &kp EXCL   &kp PRCNT
+&trans  &kp TILDE  &kp AMPS   &kp PIPE   &kp SQT    &kp DQT      &trans                       &mmv MOVE_DOWN                   &kp EQUAL  &kp AMPS  &kp UNDER &kp COLON  &kp SEMI   &none
                                  &trans     &trans     &kp SPACE                                                                 &kp RET    &trans    &trans
             >;
         };
 
-        // LAYER 3: NAV (VIM навигация справа / Мышь слева)
+        // LAYER 3: NAV (Мышь слева / Стрелки HJKL справа + x5 макросы)
         nav_layer {
             display-name = "NAV";
             bindings = <
-&trans  &none       &none      &none      &none      &none                                    &mmv MOVE_UP                     &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp INS  &kp BSPC
-&trans  &none       &mkp LCLK  &mkp MCLK  &mkp RCLK  &none                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &none    &none
-&trans  &none       &none      &none      &none      &none      &kp C_MUTE                    &mmv MOVE_DOWN                   &kp N0     &kp H     &kp J     &kp K      &kp L    &kp DLLR
+&trans  &none       &mmv MOVE_UP    &none            &none            &none                                    &mmv MOVE_UP                     &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp INS  &kp BSPC
+&trans  &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none            &none                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &none    &none
+&trans  &mkp LCLK   &mkp MCLK       &mkp RCLK        &mkp MB4         &mkp MB5   &kp C_MUTE                    &mmv MOVE_DOWN                   &none      &m_lt5    &m_dn5    &m_up5     &m_rt5   &none
                                &trans     &trans     &trans                                                                    &trans     &trans    &trans
             >;
-            // Навигационный слой переводит энкодер в режим скролла
             sensor-bindings = <&scroll_encoder>;
         };
 
-        // LAYER 4: SYS (F1-F12 справа / Система слева)
+        // LAYER 4: SYS (F-клавиши по сетке NUM)
         sys_layer {
             display-name = "SYS";
             bindings = <
