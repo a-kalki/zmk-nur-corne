@@ -110,7 +110,7 @@ layers:
   - '~'
   - ':'
   - {t: ;, s: ':'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '|'
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-shift$$
   - {t: '[', s: '{'}
@@ -126,7 +126,7 @@ layers:
   - +
   - {t: '-', s: _}
   - {t: \, s: '|'}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-control$$
   - '!'
   - '@'
@@ -140,8 +140,8 @@ layers:
   - _
   - {t: '=', s: +}
   - {t: /, s: '?'}
-  - '|'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGUI
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
