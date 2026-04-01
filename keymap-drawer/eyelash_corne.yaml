@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   QWERTY:
-  - $$mdi:keyboard-esc$$
+  - $$mdi:keyboard-tab$$
   - Q
   - W
   - E
@@ -13,7 +13,7 @@ layers:
   - I
   - O
   - P
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '[', s: '{'}
   - $$mdi:apple-keyboard-option$$
   - A
   - S
@@ -43,19 +43,19 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-shift$$
   - '&num_td'
+  - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:keyboard-space$$', h: NAV}
   - {t: '$$mdi:keyboard-return$$', h: SYS}
-  - SYM
   - $$mdi:apple-keyboard-shift$$
+  - SYM
   NUM:
   - +
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - '*'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - KP PLUS
   - KP 7
@@ -99,7 +99,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   SYM:
-  - $$mdi:keyboard-tab$$
+  - $$mdi:keyboard-esc$$
   - '{'
   - '}'
   - (
@@ -111,7 +111,7 @@ layers:
   - '%'
   - ':'
   - '!'
-  - $$mdi:backspace-reverse-outline$$
+  - '~'
   - $$mdi:apple-keyboard-option$$
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
@@ -126,7 +126,7 @@ layers:
   - {t: '=', s: +}
   - {t: ;, s: ':'}
   - '?'
-  - $
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - RGUI
   - '&'
   - '|'
@@ -139,14 +139,14 @@ layers:
   - '*'
   - ^
   - _
-  - '~'
+  - $
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   NAV:
   - '&mkp MB4'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
