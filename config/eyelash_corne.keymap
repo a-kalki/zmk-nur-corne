@@ -33,7 +33,7 @@
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
-            bindings = <&kp TAB>, <&kp CAPS>;
+            bindings = <&kp TAB>, <&kp CAPSLOCK>;
 
             label = "tab dance caps lock";
             tapping-term-ms = <150>;
