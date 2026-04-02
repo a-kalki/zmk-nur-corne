@@ -15,7 +15,7 @@ layers:
   - P
   - {t: '[', s: '{'}
   - $$mdi:apple-keyboard-option$$
-  - {t: LGUI A, h: LGUI LGUI}
+  - '&hrm_lgui A'
   - S
   - D
   - F
