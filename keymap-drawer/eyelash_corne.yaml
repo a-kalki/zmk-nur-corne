@@ -15,7 +15,7 @@ layers:
   - P
   - {t: '[', s: '{'}
   - $$mdi:apple-keyboard-option$$
-  - A
+  - '&hrm_g A'
   - S
   - D
   - F
