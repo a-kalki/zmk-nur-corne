@@ -1,7 +1,7 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 600  // 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 10   // 10
 
-#include <dt-bindings/zmk/unicode.h>
+#include <behaviors/unicode.dtsi>
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -49,6 +49,13 @@ UC_UNICODE_PAIR(uc_ast,  U_002A) // *
 UC_UNICODE_PAIR(uc_caret, U_005E) // ^
 UC_UNICODE_PAIR(uc_undr, U_005F) // _
 UC_UNICODE_PAIR(uc_dllr, U_0024) // $
+
+&uc {
+  default-mode = <UC_MODE_LINUX>;  // Default to Linux input system
+  minimum-length = <0>;            // Set to desired minimum input length
+  linux-key = <LC(LS(U))>;         // Overwrite Linux compose key
+  win-compose-key = <RALT>;        // Overwrite WinCompose compose key
+};;
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -180,7 +187,7 @@ UC_UNICODE_PAIR(uc_dllr, U_0024) // $
             bindings = <
 &bt BT_CLR      &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2    &bt BT_SEL 1  &bt BT_SEL 0                         &none                    &kp F12      &kp F7      &kp F8  &kp F9  &kp SLCK  &kp PRINTSCREEN
 &bt BT_CLR_ALL  &none         &none         &none           &none         &none                   &kp K_SLEEP  &kp K_POWER  &kp K_LOCK  &kp F11      &kp F4      &kp F5  &kp F6  &kp INS   &none
-&out OUT_BLE    &out OUT_USB  &none         &none           &&uc_mod_win  &uc_mod_linux  &trans                &none                    &kp F10      &kp F1      &kp F2  &kp F3  &none     &none
+&out OUT_BLE    &out OUT_USB  &none         &none           &&uc UC_SET_LINUX  &uc UC_SET_WIN_COMPOSE &trans   &none                    &kp F10      &kp F1      &kp F2  &kp F3  &none     &none
                                             &studio_unlock  &sys_reset    &bootloader                                                   &bootloader  &sys_reset  &none
             >;
 
