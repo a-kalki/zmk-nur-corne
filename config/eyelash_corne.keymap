@@ -1,8 +1,6 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 600  // 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 10   // 10
 
-#include <behaviors/unicode.dtsi>
-
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors.dtsi>
@@ -10,6 +8,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
+
+#include <behaviors/unicode.dtsi>
 
 &uc {
   default-mode = <UC_MODE_LINUX>;  // Default to Linux input system
