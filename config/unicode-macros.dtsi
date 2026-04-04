@@ -49,7 +49,7 @@
             bindings = <&uc 0x5D 0>;
         };
 
-        lt: lt {
+        lt_: lt_ {
             compatible = "zmk,behavior-macro";
             label = "\<";
             #binding-cells = <0>;
