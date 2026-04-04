@@ -126,7 +126,7 @@ layers:
   - '&equal'
   - '&semi'
   - '&ques'
-  - '&at k'
+  - '&at'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&amps'
   - '&pipe'
