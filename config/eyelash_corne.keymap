@@ -10,6 +10,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #include <behaviors/unicode.dtsi>
+#include "unicode-macros.dtsi"
 
 &uc {
   default-mode = <UC_MODE_LINUX>;  // Default to Linux input system
@@ -117,10 +118,10 @@
         sym_layer {
             display-name = "SYM";
             bindings = <
-&none  &uc 0x7B 0  &uc 0x7D 0  &uc 0x28 0  &uc 0x29 0  &uc 0x60 0                                    &mmv MOVE_UP                     &uc 0x2E 0  &uc 0x2B 0   &uc 0x25 0   &uc 0x3A 0  &uc 0x21 0  &uc 0x7E 0
-&none  &uc 0x5B 0  &uc 0x5D 0  &uc 0x3C 0  &uc 0x3E 0  &uc 0x27 0                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &uc 0x2C 0  &uc 0x2D 0   &uc 0x3D 0   &uc 0x3B 0  &uc 0x3F 0  &uc 0x40 0
-&none  &uc 0x26 0  &uc 0x7C 0  &uc 0x5C 0  &uc 0x2F 0  &uc 0x22 0          &trans                    &mmv MOVE_DOWN                   &uc 0x23 0  &uc 0x2A 0   &uc 0x5E 0   &uc 0x5F 0  &uc 0x24 0  &uc 0x2010 0
-                                &trans      &trans      &trans                                                                        &trans      &trans       &trans
+              &none  &uc_lcurly   &uc_rcurly   &uc_lparen   &uc_rparen   &uc_grave                                    &mmv MOVE_UP                     &uc_dot     &uc_plus    &uc_percent  &uc_colon   &uc_excl    &uc_tilde
+              &none  &uc_lbkt     &uc_rbkt     &uc_lt       &uc_gt       &uc_apos                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &uc_comma   &uc_minus   &uc_equal   &uc_semi    &uc_ques    &uc_at
+              &none  &uc_amps     &uc_pipe     &uc_bslash   &uc_fslash   &uc_dqt           &trans                    &mmv MOVE_DOWN                   &uc_hash    &uc_astrk   &uc_caret   &uc_under   &uc_dollar  &uc_defis
+                                              &trans      &trans      &trans                                                                        &trans      &trans       &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
