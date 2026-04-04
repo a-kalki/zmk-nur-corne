@@ -140,7 +140,7 @@ layers:
   - '&caret'
   - '&under'
   - '&dollar'
-  - '&defis'
+  - '&endash'
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
