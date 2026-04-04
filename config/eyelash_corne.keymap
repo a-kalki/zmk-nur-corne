@@ -119,7 +119,7 @@
             bindings = <
 &none  &uc 0x7B 0  &uc 0x7D 0  &uc 0x28 0  &uc 0x29 0  &uc 0x60 0                                    &mmv MOVE_UP                     &uc 0x2E 0  &uc 0x2B 0   &uc 0x25 0   &uc 0x3A 0  &uc 0x21 0  &uc 0x7E 0
 &none  &uc 0x5B 0  &uc 0x5D 0  &uc 0x3C 0  &uc 0x3E 0  &uc 0x27 0                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &uc 0x2C 0  &uc 0x2D 0   &uc 0x3D 0   &uc 0x3B 0  &uc 0x3F 0  &uc 0x40 0
-&none  &uc 0x26 0  &uc 0x7C 0  &uc 0x5C 0  &uc 0x2F 0  &uc 0x22 0          &trans                    &mmv MOVE_DOWN                   &uc 0x23 0  &uc 0x2A 0   &uc 0x5E 0   &uc 0x5F 0  &uc 0x24 0  &none
+&none  &uc 0x26 0  &uc 0x7C 0  &uc 0x5C 0  &uc 0x2F 0  &uc 0x22 0          &trans                    &mmv MOVE_DOWN                   &uc 0x23 0  &uc 0x2A 0   &uc 0x5E 0   &uc 0x5F 0  &uc 0x24 0  &uc 0x2010 0
                                 &trans      &trans      &trans                                                                        &trans      &trans       &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
