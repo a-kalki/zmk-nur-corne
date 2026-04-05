@@ -109,9 +109,9 @@
         sys_layer {
             display-name = "SYS";
             bindings = <
-&bt BT_CLR      &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2    &bt BT_SEL 1  &bt BT_SEL 0                         &none                    &kp F12      &kp F7      &kp F8  &kp F9  &kp SLCK  &kp PRINTSCREEN
-&bt BT_CLR_ALL  &none         &none         &none           &none         &none                   &kp K_SLEEP  &kp K_POWER  &kp K_LOCK  &kp F11      &kp F4      &kp F5  &kp F6  &kp INS   &none
-&out OUT_BLE    &out OUT_USB  &none         &none           &uc UC_SET_LINUX  &uc UC_SET_WIN_COMPOSE  &trans   &none                    &kp F10      &kp F1      &kp F2  &kp F3  &none     &none
+&bt BT_CLR      &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2    &bt BT_SEL 1  &bt BT_SEL 0                         &none                    &kp F12      &kp F7      &kp F8  &kp F9  &none  &kp PRINTSCREEN
+&bt BT_CLR_ALL  &none         &none         &none           &none         &none                   &kp K_SLEEP  &kp K_POWER  &kp K_LOCK  &kp F11      &kp F4      &kp F5  &kp F6  &none  &kp INS
+&out OUT_BLE    &out OUT_USB  &none         &none           &uc UC_SET_LINUX  &uc UC_SET_WIN_COMPOSE  &trans   &none                    &kp F10      &kp F1      &kp F2  &kp F3  &none  &none
                                             &studio_unlock  &sys_reset    &bootloader                                                   &bootloader  &sys_reset  &none
             >;
 
@@ -122,7 +122,7 @@
         nur_keys_layer {
             display-name = "N_KEYS";
             bindings = <
-&caps_word  &none     &none     &kp E      &kp R      &none                  &none         &none  &kp U      &kp I      &none     &none     &kt GRAVE
+&caps_word  &none     &none     &kp E      &kp R      &none                  &none         &none  &kp U      &kp I      &none     &none     &kp GRAVE
 &none       &kp A     &kp S     &kp D      &kp F      &kp G           &none  &none  &none  &kp H  &kp J      &kp K      &kp L     &kp SEMI  &none
 &none       &none     &none     &none      &none      &none  &none           &none         &none  &none      &none      &none     &none     &none
                                 &none      &none      &none                                &none  &none      &none
