@@ -1,20 +1,20 @@
 / {
     macros {
-      nbsp: nbsp {
+      h_nbsp: h_nbsp {
           compatible = "zmk,behavior-macro";
           label = "&nbsp;";
           #binding-cells = <0>;
           bindings = <&kp AMPS &kp N &kp B &kp S &kp P &kp SEMI>;
       };
 
-      ensp: ensp {
+      h_ensp: h_ensp {
           compatible = "zmk,behavior-macro";
           label = "&ensp;";
           #binding-cells = <0>;
           bindings = <&kp AMPS &kp E &kp N &kp S &kp P &kp SEMI>;
       };
 
-      emsp: emsp {
+      h_emsp: h_emsp {
           compatible = "zmk,behavior-macro";
           label = "&emsp;";
           #binding-cells = <0>;
@@ -28,42 +28,42 @@
           bindings = <&kp AMPS &kp L &kp T &kp SEMI>;
       };
 
-      gt: gt {
+      h_gt: h_gt {
           compatible = "zmk,behavior-macro";
           label = "&gt;";
           #binding-cells = <0>;
           bindings = <&kp AMPS &kp G &kp T &kp SEMI>;
       };
 
-      amp: amp {
+      h_amp: h_amp {
           compatible = "zmk,behavior-macro";
           label = "&amp;";
           #binding-cells = <0>;
           bindings = <&kp AMPS &kp A &kp M &kp P &kp SEMI>;
       };
 
-      quot: quot {
+      h_quot: h_quot {
           compatible = "zmk,behavior-macro";
           label = "&quot;";
           #binding-cells = <0>;
           bindings = <&kp AMPS &kp Q &kp U &kp O &kp T &kp SEMI>;
       };
 
-      apos: apos {
+      h_apos: h_apos {
           compatible = "zmk,behavior-macro";
           label = "&apos;";
           #binding-cells = <0>;
           bindings = <&kp AMPS &kp A &kp P &kp O &kp S &kp SEMI>;
       };
 
-      copy: copy {
+      h_copy: h_copy {
           compatible = "zmk,behavior-macro";
           label = "&copy;";
           #binding-cells = <0>;
           bindings = <&kp AMPS &kp C &kp O &kp P &kp Y &kp SEMI>;
       };
 
-      euro: euro {
+      h_euro: h_euro {
           compatible = "zmk,behavior-macro";
           label = "&euro;";
           #binding-cells = <0>;
