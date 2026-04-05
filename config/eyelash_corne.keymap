@@ -167,12 +167,12 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        // LAYER 5: EN_SYM (символы занятые по модификаторам)
-        en_sym_layer {
-            display-name = "EN_SYM";
+        // LAYER 5: SYM_2 (символы занятые по модификаторам)
+        sym_2_layer {
+            display-name = "SYM_2";
             bindings = <
               &kp GRAVE    &kp EXCL   &kp AT    &kp HASH     &kp DLLR     &kp PRCNT              &none           &kp COLON    &kp AMPS    &kp ASTRK    &kp LPAR    &kp RPAR   &kp MINUS
-              &caps_word   &none      &none     &none        &none        &none           &none  &none  &none    &none        &kp J       &kp K        &kp L       &kp SEMI   &kp EQUAL
+              &caps_word   &none      &none     &none        &none        &none           &none  &none  &none    &kp H        &kp J       &kp K        &kp L       &none      &kp EQUAL
               &h_nbsp      &h_lt      &h_gt     &h_amp       &h_quot      &h_apos    &none         &none         &h_ensp      &h_emsp     &h_copy      &h_euro     &none      &kp BSLH
                                                 &none        &none        &none                                  &none        &none       &none
             >;
