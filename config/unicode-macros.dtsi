@@ -1,5 +1,12 @@
 / {
     macros {
+        copyrt: copyrt {
+            compatible = "zmk,behavior-macro";
+            label = "{";
+            #binding-cells = <0>;
+            bindings = <&uc 0xA9 0>;
+        };
+
         lcurly: lcurly {
             compatible = "zmk,behavior-macro";
             label = "{";
@@ -228,7 +235,7 @@
             compatible = "zmk,behavior-macro";
             label = "–";
             #binding-cells = <0>;
-            bindings = <&uc 0x2010 0>;
+            bindings = <&uc 0x2014 0>;
         };
     };
 };

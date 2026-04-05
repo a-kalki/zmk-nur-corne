@@ -132,10 +132,10 @@
         sym_layer {
             display-name = "SYM";
             bindings = <
-              &none  &lcurly   &rcurly   &lparen   &rparen   &grave                                    &mmv MOVE_UP                     &dot     &plus    &percent  &colon   &excl    &tilde
-             &none  &lbkt     &rbkt     &lt_       &gt       &apos                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &comma   &minus   &equal   &semi    &ques    &at
-             &none  &amps     &pipe     &bslash   &fslash   &dqt           &trans                    &mmv MOVE_DOWN                   &hash    &astrk   &caret   &under   &dollar  &endash
-                                              &trans      &trans      &trans                                                                        &trans      &trans       &trans
+             &copyrt  &lcurly   &rcurly   &lparen   &rparen   &grave                                    &mmv MOVE_UP                    &dot     &plus    &percent  &colon   &excl    &tilde
+             &endash  &lbkt     &rbkt     &lt_       &gt       &apos                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT   &comma   &minus   &equal    &semi    &ques    &at
+             &none    &amps     &pipe     &bslash   &fslash   &dqt           &trans                    &mmv MOVE_DOWN                   &hash    &astrk   &caret    &under   &dollar  &none
+                                                &trans      &trans      &trans                                                                        &trans      &trans       &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
