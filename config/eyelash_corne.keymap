@@ -10,10 +10,10 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #include <behaviors/unicode.dtsi>
-#include <key-labels-42.dtsi>
 
 #include "unicode-macros.dtsi"
 #include "move-macros.dtsi"
+#include "key-labels-42.dtsi"
 
 &uc {
   default-mode = <UC_MODE_LINUX>;  // Default to Linux input system
