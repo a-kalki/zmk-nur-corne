@@ -11,11 +11,12 @@
 
 #include <behaviors/unicode.dtsi>
 
-#include "key-labels-42.dtsi"
-#include "hmr.dtsi"
 #include "unicode-macros.dtsi"
 #include "nur-macros.dtsi"
 #include "move-macros.dtsi"
+
+#include "key-labels-42.dtsi"
+#include "hmr.dtsi"
 
 &uc {
   default-mode = <UC_MODE_LINUX>;  // Default to Linux input system
