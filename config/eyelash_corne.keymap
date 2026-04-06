@@ -99,7 +99,7 @@
 &kp GRAVE    &kp EXCL   &kp AT    &kp HASH     &kp DLLR     &kp PRCNT              &none           &kp CARET    &kp AMPS    &kp ASTRK    &kp LPAR    &kp RPAR   &kp MINUS
 &caps_word   &none      &none     &none        &none        &none           &none  &none  &none    &kp H        &kp J       &kp K        &kp L       &none      &kp EQUAL
 &none        &none      &none     &none        &none        &v_grave    &none      &none           &none        &none       &none        &none       &none      &kp BSLH
-                                  &none        &none        &none                                  &none        &none       &none
+                                  &trans       &trans       &trans                                 &trans       &trans      &trans
       >;
       sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
@@ -134,10 +134,10 @@
     un_sym_layer {
       display-name = "UN_SYM";
       bindings = <
-&deg     &lcurly   &rcurly   &lparen   &rparen   &grave                                    &mmv MOVE_UP                    &dot     &plus    &percent  &colon   &excl    &tilde
-&laquo   &lbkt     &rbkt     &uc_lt    &gt       &apos                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT    &comma   &minus   &equal    &semi    &ques    &at
-&raquo   &amps     &pipe     &bslash   &fslash   &dqt           &trans                    &mmv MOVE_DOWN                   &hash    &astrk   &caret    &under   &dollar  &endash
-                              &trans      &trans      &trans                                                                        &trans      &trans       &trans
+&deg     &lcurly   &rcurly   &lparen   &rparen   &dqt                                      &mmv MOVE_UP                    &dot      &plus    &percent  &colon   &excl    &tilde
+&laquo   &lbkt     &rbkt     &uc_lt    &gt       &apos                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT    &comma    &minus   &equal    &semi    &ques    &at
+&raquo   &amps     &pipe     &bslash   &fslash   &grave         &trans                    &mmv MOVE_DOWN                   &hash     &astrk   &caret    &under   &dollar  &endash
+                             &kp ESC   &SPACE    &kp CAPS                                                                  &kp BSPC  &ENTER  &kp DELETE
       >;
     };
   };
