@@ -37,6 +37,29 @@
           bindings = <&kp MINUS &kp SPACE &kp LBKT &kp SPACE &kp RBKT &kp SPACE>;
       };
 
+      // ПРОГРАММИСТКИЕ
+
+      // Стрелочка для кода ->
+      ts_log: ts_log {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings = <&kp C &kp O &kp N &kp S &kp O &kp L &kp E &kp DOT &kp L &kp O &kp G &kp LPAR &kp RPAR &kp LEFT>;
+      };
+
+      // Стрелочная функция: () => {} (курсор внутри фигурных скобок)
+      ts_arrow: ts_arrow {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings = <&kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LBRC &kp RBRC &kp LEFT>;
+      };
+
+      // Интерполяция строки: ${} (курсор внутри)
+      ts_interp: ts_interp {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings = <&kp DLLR &kp LBRC &kp RBRC &kp LEFT>;
+      };
+
       // ТЕРМИНАЛЬНЫЕ И СИСТЕМНЫЕ
       
       // sudo !! (выполнить предыдущую команду с sudo)
@@ -59,12 +82,4 @@
           #binding-cells = <0>;
           bindings = <&kp LCTRL &kp LSHFT &kp V>;
       };
-
-      // Стрелочка для кода ->
-      arrow: arrow {
-          compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings = <&kp SPACE &kp EQUAL &kp GT &SPACE>;
-      };
-    };
 };
